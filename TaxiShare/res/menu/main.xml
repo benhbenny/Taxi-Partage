@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="fr.inria.taxishare.MainActivity" >
+
+    <item
+        android:id="@+id/menu_add"
+        android:icon="@drawable/icon_add"
+        android:title="@string/callout_new"
+        app:showAsAction="always"/>
+
+</menu>
