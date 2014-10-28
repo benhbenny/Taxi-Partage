@@ -1,9 +1,7 @@
 package fr.inria.taxishare;
 
-import fr.inria.arles.yarta.knowledgebase.MSEResource;
 import fr.inria.arles.yarta.resources.Agent;
 import fr.inria.arles.yarta.resources.Content;
-import fr.inria.arles.yarta.resources.ContentImpl;
 import fr.inria.arles.yarta.resources.Person;
 import android.content.Intent;
 import android.os.Bundle;
@@ -27,8 +25,8 @@ public class CalloutActivity extends BaseActivity {
 
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-		content = new ContentImpl(getSAM(), new MSEResource(getIntent()
-				.getStringExtra(CalloutId), Content.typeURI));
+		content = (Content) getSAM().getResourceByURI(
+				getIntent().getStringExtra(CalloutId));
 
 		adapter = new CalloutsListAdapter(this);
 
